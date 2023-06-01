@@ -31,6 +31,13 @@ In this repository, you will find a diverse range of multimedia signal processin
     5. After quantization de-quantize the image by multiplying Quantization to the image.
     6. Apply Inverse - DCT to the image.
     7. Add 128 to the Y values on the decoder side.
+ ## Audio Processing
+ ### 1. Signal to Noise Ratio of Audio signals
+  The Signal-to-Noise Ratio (SNR) is a critical metric used to quantify the quality and fidelity of audio signals. It measures the ratio of the desired signal power to the power of the background noise present in the signal. A higher SNR indicates a stronger and clearer signal relative to the background noise, while a lower SNR indicates a weaker and more distorted signal compared to the noise.
+### 2. De-noising audio signals using Mean, Median and Weighted average filters
+      ` De-noising is a process of removing noise from the signal. Here, the noises are any unwanted audio segments for the human hearing like vehicle horn sounds, wind noise, even static noise or awgn. It is also known as audio enhancement as it enhances the quality of audio. Audio enhancement is an important task and it is used as a pre-processing step in various applications such as audio/video calls, Automatic Speech Recognition (ASR) etc.
+ 
+ 
 
 
 
