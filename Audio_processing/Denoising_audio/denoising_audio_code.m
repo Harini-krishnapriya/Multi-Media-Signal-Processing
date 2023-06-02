@@ -1,4 +1,5 @@
-%Denosing audio signalWindow_length= input("enter the window length");
+%Denosing audio signal
+Window_length= input("enter the window length");
 
 [audio_signal sampling_frequency]=audioread("happy.mp3");
 nosiy_audio=awgn(audio_signal,30);
