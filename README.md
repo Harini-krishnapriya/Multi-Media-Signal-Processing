@@ -6,7 +6,7 @@ Welcome to the Multimedia Signal Processing Repository! This repository aims to 
 
 - [Introduction](#introduction)
 - [Image Processing](#image-processing)
-- [Features](#features)
+- [Audio Processing](#audio-processing)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [License](#license)
@@ -39,6 +39,28 @@ In this repository, you will find a diverse range of multimedia signal processin
   * Mean filter: Mean filter, or average filter is windowed filter of linear class, that smooths the signal. The filter works as low-pass filter. It replaces the center value in the window with the mean value of window. Filter updates every element by taking average across its neighbourhood.
   * Median filter: The median filter is a non-linear digital filtering technique, often used to remove noise from an image or signal.The main idea of the median filter is to run through the signal entry by entry, replacing each entry with the median of neighboring entries.
   * Weighted Average: An A-weighting filter is a band pass filter designed to simulate the perceived loudness of low-level tones. In weighted average filter, we gave more weight to the center value, due to which the contribution of center becomes more than the rest of the values.
+### 3. Pulse Code Modulation(PCM)
+In the context of audio signals, PCM stands for Pulse Code Modulation. It is a method used to digitally represent analog audio signals.
+PCM works by sampling the continuous analog audio waveform at regular intervals and quantizing the amplitude of each sample. This process converts the analog signal into a digital representation.
+#### Encoding:
+1. Sampling: The analog audio signal is sampled at regular intervals using an ADC, similar to the PCM encoding process.
+2. Quantization: The sampled amplitudes are quantized into discrete levels using a fixed bit depth, as in PCM encoding.
+3. Companding: Instead of directly encoding the quantized amplitudes as in PCM, companding techniques are applied to compress the dynamic range of the signal. μ-law and A-law are logarithmic companding algorithms commonly used.
+
+* μ-law Encoding: In μ-law encoding, the quantized amplitudes are mapped to a logarithmic scale using a non-linear companding function. This logarithmic compression increases the representation accuracy for smaller amplitudes and reduces the quantization noise for higher amplitudes.
+
+* A-law Encoding: Similarly, A-law encoding also applies logarithmic companding but with a different companding function. A-law encoding is commonly used in European telecommunications systems.
+4. Encoding: The compressed and encoded values are represented as binary numbers, as in PCM encoding.
+
+#### Decoding:
+  1. Decoding: The encoded binary numbers are retrieved from storage or transmitted data.
+  2. Decoding: Each binary number is interpreted as the compressed and encoded quantized amplitude value.
+  3. Expansion: The decoded compressed values are expanded using the inverse of the companding function.
+  4. Reconstruction: The expanded amplitudes are converted back into a continuous signal using a digital-to-analog converter (DAC), similar to the PCM decoding process.
+  5. Reconstruction Filtering: Similar to PCM, the reconstructed signal may undergo filtering to remove any artifacts and enhance the audio quality.
+
+The inclusion of μ-law or A-law companding helps to reduce quantization noise and improve the dynamic range of the encoded audio signal, resulting in better audio quality. These companding techniques are commonly used in various telecommunication systems and audio applications, particularly in regions where they are standard practice.
+Note: The specific companding algorithm used (μ-law or A-law) may vary depending on the region or application, and both techniques achieve similar benefits.
  
  
 
