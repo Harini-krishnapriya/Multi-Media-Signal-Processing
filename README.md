@@ -46,6 +46,9 @@ PCM works by sampling the continuous analog audio waveform at regular intervals 
 1. Sampling: The analog audio signal is sampled at regular intervals using an ADC, similar to the PCM encoding process.
 2. Quantization: The sampled amplitudes are quantized into discrete levels using a fixed bit depth, as in PCM encoding.
 3. Companding: Instead of directly encoding the quantized amplitudes as in PCM, companding techniques are applied to compress the dynamic range of the signal. μ-law and A-law are logarithmic companding algorithms commonly used.
+## Video Processing
+### 1. Denoising Video signals
+
 
 * μ-law Encoding: In μ-law encoding, the quantized amplitudes are mapped to a logarithmic scale using a non-linear companding function. This logarithmic compression increases the representation accuracy for smaller amplitudes and reduces the quantization noise for higher amplitudes.
 
