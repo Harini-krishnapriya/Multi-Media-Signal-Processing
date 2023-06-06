@@ -46,10 +46,6 @@ PCM works by sampling the continuous analog audio waveform at regular intervals 
 1. Sampling: The analog audio signal is sampled at regular intervals using an ADC, similar to the PCM encoding process.
 2. Quantization: The sampled amplitudes are quantized into discrete levels using a fixed bit depth, as in PCM encoding.
 3. Companding: Instead of directly encoding the quantized amplitudes as in PCM, companding techniques are applied to compress the dynamic range of the signal. μ-law and A-law are logarithmic companding algorithms commonly used.
-## Video Processing
-### 1. Denoising Video signals
-
-
 * μ-law Encoding: In μ-law encoding, the quantized amplitudes are mapped to a logarithmic scale using a non-linear companding function. This logarithmic compression increases the representation accuracy for smaller amplitudes and reduces the quantization noise for higher amplitudes.
 
 * A-law Encoding: Similarly, A-law encoding also applies logarithmic companding but with a different companding function. A-law encoding is commonly used in European telecommunications systems.
@@ -64,7 +60,31 @@ PCM works by sampling the continuous analog audio waveform at regular intervals 
 
 The inclusion of μ-law or A-law companding helps to reduce quantization noise and improve the dynamic range of the encoded audio signal, resulting in better audio quality. These companding techniques are commonly used in various telecommunication systems and audio applications, particularly in regions where they are standard practice.
 Note: The specific companding algorithm used (μ-law or A-law) may vary depending on the region or application, and both techniques achieve similar benefits.
- 
+
+## Video Processing
+### 1. Denoising Video signals
+Noise is a dominant factor that can severely degrade the quality of videos signals during acquisition, transmission and reception process. The corrupting noise might results variation in some pixels value of all the video frames. So, the noise reduction is highly desirable for improving visual quality. Denoising is a pre-process step for improving the accuracy of subsequent image processing algorithms like segmentation, object detection, object tracking, feature extraction etc. This pre-processing task is necessary to remove corrupted pixel value while preserving other important details.
+#### De-noising of video signals using moving average filter
+The moving average filter operates by averaging a number of frames form noisy video to produce each frame in the output video. The number of frames is named as sample size or window size. For each frame in the output video, this filter averages same number of frames. As the length of filter increases, the smoothness of output increases.
+ This type of averaging can retain edge sharpness while reducing random noise. Thus make it premier filter for time domain encode signals and Video signals are encoded in time domain, therefore proposed algorithm uses moving average filtering to retrieve the corrupted pixel value.
+
+### 2. Foreground detection using background subtraction techniques
+#### Foreground detection:
+It one of the major tasks in computer vision and image processing, aiming to detect changes in image sequences.
+#### Background Subtraction:
+Background subtraction is a widely used approach for detecting moving objects in videos from static cameras. The rationale in the approach is that of detecting the moving objects from the difference between the current frame and a reference frame, often called "background-image", or "background model". Background subtraction is mostly done if the image in question is part of a video stream
+##### The four major steps in the background subtraction algorithm are: 
+1. Pre-processing,
+2. Background modeling,
+3. Foreground detection, and
+4. Data validation
+
+*Background modeling:* We classify background modeling techniques into 2 broad categories:
+1. Non-recursive: a non-recursive technique uses a sliding window approach for background estimation. Some of the commonly used non-recursive techniques are :
+  * *Frame Differencing*: background is estimated to be the previous frame.
+  
+   
+
  
 
 
