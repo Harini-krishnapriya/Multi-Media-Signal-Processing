@@ -80,8 +80,15 @@ Background subtraction is a widely used approach for detecting moving objects in
 4. Data validation
 
 *Background modeling:* We classify background modeling techniques into 2 broad categories:
-1. Non-recursive: a non-recursive technique uses a sliding window approach for background estimation. Some of the commonly used non-recursive techniques are :
-  * *Frame Differencing*: background is estimated to be the previous frame.
+1. Non-Recursive: A non-recursive technique uses a sliding window approach for background estimation. Some of the commonly used non-recursive techniques are :
+  * *Frame Differencing*: Background is estimated to be the previous frame.
+  * *Median Filter*: the background estimate is defined to be the median at each pixel location of all the frames in the buffer. We can use the median of the previous n frames 
+                     as a background model.
+  * *Mean Filter*: In this case, the background is the mean of the n frames.
+2. Recursive: Recursive techniques are highly adaptive as they do not depend on the history beyond those frames stored in the buffer. Some of the commonly used non-recursive 
+techniques are:
+  * *Running Average Model*:The running average of a function is used to separate foreground from background. In this concept, the video sequence is analyzed over a particular set of frames. During this sequence of frames, the running average over the current frame and the previous frames is computed.
+  * *Gaussian Moving Average Model*: It is also a Gaussian Mixture-based Background/Foreground Segmentation Algorithm. It provides better adaptability to varying scenes due to illumination changes etc.
   
    
 
