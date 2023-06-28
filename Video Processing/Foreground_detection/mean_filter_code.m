@@ -1,4 +1,4 @@
-% non iterative method for object detection 
+% Non Iterative method for object detection 
 % Mean Filter
 clc;
 clear all;
@@ -21,7 +21,7 @@ for i=1:FrameRate-Window_length
     I_frame=uint8(zeros(m,n,p));
 end
 for f = 1:FrameRate-Window_length 
-    diff_frame(:,:,:) = abs(video_read(:,:,:,f)-mean_frame(:,:,:,f)); % Taking differnce of previous frame and present frame
+    diff_frame(:,:,:) = abs(video_read(:,:,:,f)-mean_frame(:,:,:,f)); % Taking difference of previous frame and present frame
     for k=1:3
         for i=1:m
             for j=1:n
