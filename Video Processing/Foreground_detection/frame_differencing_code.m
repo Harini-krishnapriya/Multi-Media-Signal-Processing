@@ -1,4 +1,4 @@
-% non iterative method for object detection 
+% Non Iterative method for object detection 
 % Frame Differencing
 clc;
 clear all;
@@ -11,7 +11,7 @@ diff_frame = uint8(zeros(m,n,p));
 binary_frame = uint8(zeros(m,n,p));
 threshold = input("Enter the Threshold value");
 for f = 2:FrameRate 
-    diff_frame(:,:,:) = abs(video_read(:,:,:,f)-video_read(:,:,:,f-1)); % Taking differnce of previous frame and present frame
+    diff_frame(:,:,:) = abs(video_read(:,:,:,f)-video_read(:,:,:,f-1)); % Taking difference of previous frame and present frame
     for k=1:3
         for i=1:m
             for j=1:n
