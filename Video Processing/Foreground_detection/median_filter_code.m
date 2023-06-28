@@ -1,4 +1,4 @@
-% non iterative method for object detection 
+% Non Iterative method for object detection 
 % Median Filter
 clc;
 clear all;
@@ -6,7 +6,7 @@ video = VideoReader('traffic.avi');
 video_read = read(video);
 FrameRate = get(video,'NumberOfFrames'); 
 [m,n,p,q] = size(video_read);
-I_frame =uint8(zeros(m,n,p));
+I_frame = uint8(zeros(m,n,p));
 diff_frame = uint8(zeros(m,n,p)); 
 binary_frame = uint8(zeros(m,n,p));
 window = input("Enter the window length");
@@ -31,7 +31,7 @@ for k=1:3
     end
 end
 for f = 1:FrameRate 
-    diff_frame(:,:,:) = abs(video_read(:,:,:,f)-I_win_frame(:,:,:,f)); % Taking differnce of previous frame and present frame
+    diff_frame(:,:,:) = abs(video_read(:,:,:,f)-I_win_frame(:,:,:,f)); % Taking difference of previous frame and present frame
     for k=1:3
         for i=1:m
             for j=1:n
