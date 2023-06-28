@@ -1,4 +1,4 @@
-% iterative method for object detection 
+% Iterative method for object detection 
 % Running Average Model
 clc;
 clear all;
@@ -16,7 +16,7 @@ for i = 2:FrameRate
     B(:,:,:,i) = alpha*video_read(:,:,:,i-1)+(1-alpha)*B(:,:,:,i-1); % Background
 end
 for f = 1:FrameRate 
-    diff_frame(:,:,:) = abs(video_read(:,:,:,f)-B(:,:,:,f)); % Taking differnce of previous frame and present frame
+    diff_frame(:,:,:) = abs(video_read(:,:,:,f)-B(:,:,:,f)); % Taking difference of previous frame and present frame
     for k=1:3
         for i=1:m
             for j=1:n
