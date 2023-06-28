@@ -1,4 +1,4 @@
-% iterative method for object detection 
+% Iterative method for object detection 
 % Running Average Model
 clc;
 clear all;
