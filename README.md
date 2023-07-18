@@ -7,9 +7,6 @@ Welcome to the Multimedia Signal Processing Repository! This repository aims to 
 - [Introduction](#introduction)
 - [Image Processing](#image-processing)
 - [Audio Processing](#audio-processing)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 Multimedia signal processing is a field of study that focuses on the processing, manipulation, analysis, and understanding of various types of multimedia data, including audio, video, and images. It involves the application of digital signal processing techniques to extract information, enhance quality, and enable efficient transmission, storage, and retrieval of multimedia content.
